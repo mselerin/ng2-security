@@ -1,0 +1,39 @@
+{
+  "name": "ng2-security",
+  "version": "0.1.0",
+  "scripts": {
+    "prepublish": "tsc",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mselerin/ng2-security"
+  },
+  "author": {
+    "name": "Michel Selerin",
+    "email": "michel.selerin@outlook.com"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "security",
+    "authentication"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mselerin/ng2-security/issues"
+  },
+  "main": "./dist/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/core": "^2.0.0",
+    "@angular/common": "^2.0.0",
+    "rxjs": "^5.0.1",
+    "typescript": "2.1.4",
+    "zone.js": "0.7.2",
+    "@types/es6-shim": "^0.31.32"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
