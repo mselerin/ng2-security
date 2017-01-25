@@ -30,8 +30,7 @@
     "@angular/common": "^2.0.0",
     "rxjs": "^5.0.1",
     "typescript": "2.1.4",
-    "zone.js": "0.7.2",
-    "@types/es6-shim": "^0.31.32"
+    "zone.js": "0.7.2"
   },
   "engines": {
     "node": ">=0.8.0"
