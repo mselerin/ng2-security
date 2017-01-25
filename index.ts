@@ -21,7 +21,6 @@ const DIRECTIVES: any[] = [
         CommonModule
     ],
     declarations: DIRECTIVES,
-    exports: DIRECTIVES,
-    providers: [{ provide: AuthService, useClass: DummyAuthService }]
+    exports: DIRECTIVES
 })
 export class SecurityModule {}
