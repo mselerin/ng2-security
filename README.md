@@ -1,6 +1,6 @@
 # ng2-security
 
-This module provide a set of directives which can hide or show elements based on an AuthService.
+This module provides a set of directives which can hide or show elements based on an AuthService.
 
 ## Directives
 
