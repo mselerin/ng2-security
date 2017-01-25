@@ -1,5 +1,7 @@
 # ng2-security
 
+[![Build Status](https://travis-ci.org/mselerin/ng2-security.svg?branch=master)](https://travis-ci.org/mselerin/ng2-security)
+
 This module provides a set of directives which can hide or show elements based on an AuthService.
 
 ## Directives
