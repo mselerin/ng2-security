@@ -104,3 +104,35 @@ export class IfNotRoleDirective extends BaseSecurityDirective
     }
 }
 
+
+
+@Directive({ selector: '[secIfAnyRoles]' })
+export class IfAnyRolesDirective extends BaseSecurityDirective
+{
+    @Input('secIfAnyRoles') roles: string[];
+
+    hasPermission() {
+        if (this.roles) {
+            return this.roles.some((role) => this.authService.hasRole(role));
+        }
+
+        return false;
+    }
+}
+
+
+
+
+@Directive({ selector: '[secIfAllRoles]' })
+export class IfAllRolesDirective extends BaseSecurityDirective
+{
+    @Input('secIfAllRoles') roles: string[];
+
+    hasPermission() {
+        if (this.roles) {
+            return this.roles.every((role) => this.authService.hasRole(role));
+        }
+
+        return false;
+    }
+}
