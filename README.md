@@ -1,21 +1,21 @@
 # ng2-security
+## A set of directives to hide or show elements based on an AuthService.
 
 [![npm version](https://badge.fury.io/js/ng2-security.svg)](https://badge.fury.io/js/ng2-security) [![Build Status](https://travis-ci.org/mselerin/ng2-security.svg?branch=master)](https://travis-ci.org/mselerin/ng2-security)
-
-This module provides a set of directives which can hide or show elements based on an AuthService.
 
 ## Directives
 
 `*secIfAuthenticated` and `*secIfAnonymous`
 are based on `AuthService.isAuthenticated(): boolean`
 
-`*secIfRole` and `*secIfNotRole`
+`*secIfRole`, `*secIfAnyRoles`, `*secIfAllRoles`, `*secIfNotRole`
 are based on `AuthService.hasRole(role: string): boolean`
 
 Example :
 ```
 <a *secIfAnonymous [routerLink]="['/login']">Login</a>
 <a *secIfAuthenticated [routerLink]="['/logout']">Logout</a>
+<a *secIfAnyRoles="['manager', 'admin']" [routerLink]="['/logout']">Logout</a>
 ```
 
 ## Service
@@ -72,7 +72,7 @@ A sample 'DummyAuthService' is included within this module.
       SecurityModule
     ],
     providers: [
-      { provide: AuthService, useClass: JWTAuthService }
+      { provide: AuthService, useClass: DummyAuthService }
     ]
 
 })
@@ -102,7 +102,7 @@ export class SharedModule { }
       /* Other Modules */
     ],
     providers: [
-      { provide: AuthService, useClass: JWTAuthService }
+      { provide: AuthService, useClass: DummyAuthService }
     ]
 
 })
