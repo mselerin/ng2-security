@@ -11,6 +11,7 @@ export abstract class AuthService
 
     public login(credentials: any): Promise<any> { this.authChanged(); return Promise.resolve(null); }
     public logout(): Promise<any> { this.authChanged(); return Promise.resolve(null); }
+    public touch(): Promise<any> { return Promise.resolve(null); }
     public getAuthHeader(): string { return null; }
     public isAuthenticated(): boolean { return false; }
     public hasRole(role: string): boolean { return false; }
