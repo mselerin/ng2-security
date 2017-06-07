@@ -3,7 +3,7 @@ import {Directive, OnInit, Input, TemplateRef, ViewContainerRef} from '@angular/
 import {AuthService} from './security.service';
 
 
-@Directive({})
+@Directive({ selector: '[secBaseSecurity]' })
 export class BaseSecurityDirective implements OnInit
 {
     private viewCreated: boolean;
@@ -40,7 +40,7 @@ export class BaseSecurityDirective implements OnInit
 }
 
 
-@Directive({})
+@Directive({ selector: '[secBaseAuthenticated]' })
 export class BaseAuthenticatedDirective extends BaseSecurityDirective
 {
     protected authenticated: boolean;

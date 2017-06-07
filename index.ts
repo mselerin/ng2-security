@@ -1,11 +1,14 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {
-    IfAuthenticatedDirective,
+    BaseAuthenticatedDirective,
+    BaseSecurityDirective,
+    IfAllRolesDirective,
     IfAnonymousDirective,
-    IfRoleDirective,
+    IfAnyRolesDirective,
+    IfAuthenticatedDirective,
     IfNotRoleDirective,
-    IfAnyRolesDirective, IfAllRolesDirective,
+    IfRoleDirective
 } from "./src/security.directive";
 
 export * from './src/security.directive';
@@ -13,6 +16,8 @@ export * from './src/security.service';
 
 
 const DIRECTIVES: any[] = [
+    BaseSecurityDirective,
+    BaseAuthenticatedDirective,
     IfAuthenticatedDirective,
     IfAnonymousDirective,
     IfRoleDirective,
