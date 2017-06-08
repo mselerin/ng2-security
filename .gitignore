@@ -1,5 +1,5 @@
 # Node
-node_modules/*
+node_modules
 npm-debug.log
 
 # TypeScript
@@ -24,3 +24,6 @@ Desktop.ini
 # Mac
 .DS_Store
 **/.DS_Store
+
+# Custom
+dist
