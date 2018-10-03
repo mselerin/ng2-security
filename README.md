@@ -1,3 +1,6 @@
+**DEPRECATED - Please use [Ngx-Security](https://github.com/mselerin/ngx-security) instead.**
+---
+
 # ng2-security
 ## A set of directives to hide or show elements based on an AuthService.
 
